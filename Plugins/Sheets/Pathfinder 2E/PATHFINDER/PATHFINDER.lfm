@@ -2,7 +2,7 @@
 <form name="frmPATHFINDER" formType="sheetTemplate" dataType="PathFinder_Oficial" title="PathFinder 2E (Oficial)" align="client" theme="light">
     <tabControl align="client">
         <tab title="Página 4">
-            <import file="4.lfm"/>
+            <import file="5.lfm"/>
         </tab>
     </tabControl>
 </form>

@@ -7,7 +7,7 @@ require("ndb.lua");
 require("locale.lua");
 local __o_Utils = require("utils.lua");
 
-local function constructNew_frmPATHFINDER()
+local function constructNew_frmPATHFINDER5_svg()
     local obj = GUI.fromHandle(_obj_newObject("form"));
     local self = obj;
     local sheet = nil;
@@ -26,32 +26,13 @@ local function constructNew_frmPATHFINDER()
 
     _gui_assignInitialParentForForm(obj.handle);
     obj:beginUpdate();
-    obj:setName("frmPATHFINDER");
-    obj:setFormType("sheetTemplate");
-    obj:setDataType("PathFinder_Oficial");
-    obj:setTitle("PathFinder 2E (Oficial)");
+    obj:setName("frmPATHFINDER5_svg");
     obj:setAlign("client");
     obj:setTheme("light");
-
-    obj.tabControl1 = GUI.fromHandle(_obj_newObject("tabControl"));
-    obj.tabControl1:setParent(obj);
-    obj.tabControl1:setAlign("client");
-    obj.tabControl1:setName("tabControl1");
-
-    obj.tab1 = GUI.fromHandle(_obj_newObject("tab"));
-    obj.tab1:setParent(obj.tabControl1);
-    obj.tab1:setTitle("Página 4");
-    obj.tab1:setName("tab1");
-
-    obj.frmPATHFINDER5_svg = GUI.fromHandle(_obj_newObject("form"));
-    obj.frmPATHFINDER5_svg:setParent(obj.tab1);
-    obj.frmPATHFINDER5_svg:setName("frmPATHFINDER5_svg");
-    obj.frmPATHFINDER5_svg:setAlign("client");
-    obj.frmPATHFINDER5_svg:setTheme("light");
-    obj.frmPATHFINDER5_svg:setMargins({top=1});
+    obj:setMargins({top=1});
 
     obj.scrollBox1 = GUI.fromHandle(_obj_newObject("scrollBox"));
-    obj.scrollBox1:setParent(obj.frmPATHFINDER5_svg);
+    obj.scrollBox1:setParent(obj);
     obj.scrollBox1:setAlign("client");
     obj.scrollBox1:setName("scrollBox1");
 
@@ -655,13 +636,11 @@ local function constructNew_frmPATHFINDER()
         if self.edit28 ~= nil then self.edit28:destroy(); self.edit28 = nil; end;
         if self.edit7 ~= nil then self.edit7:destroy(); self.edit7 = nil; end;
         if self.edit23 ~= nil then self.edit23:destroy(); self.edit23 = nil; end;
-        if self.frmPATHFINDER5_svg ~= nil then self.frmPATHFINDER5_svg:destroy(); self.frmPATHFINDER5_svg = nil; end;
         if self.edit12 ~= nil then self.edit12:destroy(); self.edit12 = nil; end;
         if self.edit35 ~= nil then self.edit35:destroy(); self.edit35 = nil; end;
         if self.checkBox11 ~= nil then self.checkBox11:destroy(); self.checkBox11 = nil; end;
         if self.checkBox6 ~= nil then self.checkBox6:destroy(); self.checkBox6 = nil; end;
         if self.edit37 ~= nil then self.edit37:destroy(); self.edit37 = nil; end;
-        if self.tabControl1 ~= nil then self.tabControl1:destroy(); self.tabControl1 = nil; end;
         if self.checkBox8 ~= nil then self.checkBox8:destroy(); self.checkBox8 = nil; end;
         if self.checkBox7 ~= nil then self.checkBox7:destroy(); self.checkBox7 = nil; end;
         if self.rectangle1 ~= nil then self.rectangle1:destroy(); self.rectangle1 = nil; end;
@@ -685,7 +664,6 @@ local function constructNew_frmPATHFINDER()
         if self.edit8 ~= nil then self.edit8:destroy(); self.edit8 = nil; end;
         if self.edit27 ~= nil then self.edit27:destroy(); self.edit27 = nil; end;
         if self.edit32 ~= nil then self.edit32:destroy(); self.edit32 = nil; end;
-        if self.tab1 ~= nil then self.tab1:destroy(); self.tab1 = nil; end;
         if self.checkBox4 ~= nil then self.checkBox4:destroy(); self.checkBox4 = nil; end;
         if self.edit25 ~= nil then self.edit25:destroy(); self.edit25 = nil; end;
         if self.edit2 ~= nil then self.edit2:destroy(); self.edit2 = nil; end;
@@ -705,13 +683,13 @@ local function constructNew_frmPATHFINDER()
     return obj;
 end;
 
-function newfrmPATHFINDER()
+function newfrmPATHFINDER5_svg()
     local retObj = nil;
     __o_rrpgObjs.beginObjectsLoading();
 
     __o_Utils.tryFinally(
       function()
-        retObj = constructNew_frmPATHFINDER();
+        retObj = constructNew_frmPATHFINDER5_svg();
       end,
       function()
         __o_rrpgObjs.endObjectsLoading();
@@ -721,18 +699,17 @@ function newfrmPATHFINDER()
     return retObj;
 end;
 
-local _frmPATHFINDER = {
-    newEditor = newfrmPATHFINDER, 
-    new = newfrmPATHFINDER, 
-    name = "frmPATHFINDER", 
-    dataType = "PathFinder_Oficial", 
-    formType = "sheetTemplate", 
+local _frmPATHFINDER5_svg = {
+    newEditor = newfrmPATHFINDER5_svg, 
+    new = newfrmPATHFINDER5_svg, 
+    name = "frmPATHFINDER5_svg", 
+    dataType = "", 
+    formType = "undefined", 
     formComponentName = "form", 
-    title = "PathFinder 2E (Oficial)", 
+    title = "", 
     description=""};
 
-frmPATHFINDER = _frmPATHFINDER;
-Firecast.registrarForm(_frmPATHFINDER);
-Firecast.registrarDataType(_frmPATHFINDER);
+frmPATHFINDER5_svg = _frmPATHFINDER5_svg;
+Firecast.registrarForm(_frmPATHFINDER5_svg);
 
-return _frmPATHFINDER;
+return _frmPATHFINDER5_svg;

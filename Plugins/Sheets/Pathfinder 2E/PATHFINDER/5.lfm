@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form name="frmPATHFINDER4_svg" align="client" theme="light" margins="{top=1}">
-    <style>#frmPATHFINDER4_svg path {color: black; strokeColor: black; mode: stretch;} &#xD;
+<form name="frmPATHFINDER5_svg" align="client" theme="light" margins="{top=1}">
+    <style>#frmPATHFINDER5_svg path {color: black; strokeColor: black; mode: stretch;} &#xD;
 #frmPATHFINDER4_svg label {fontColor: black; textTrimming: none; wordWrap: false; autoSize: true;}</style>
     <scrollBox align="client">
         <rectangle width="905" height="1175" color="white">&#xD;
@@ -9,17 +9,17 @@
 			<edit left="129" top="60" width="35" height="22" horzTextAlign="center" fontColor="black" fontSize="14" transparent="false" field="AtaqueMagiaATBChave"/>
 			<edit left="173" top="60" width="35" height="22" horzTextAlign="center" fontColor="black" fontSize="14" transparent="false" field="AtaqueMagiaProf"/>			
 			<checkBox left="209" top="62" field="TEML1AtaqueMagia1"/>
-			<checkBox left="221" top="62" field="TEML1AtaqueMagia2"/>
-			<checkBox left="233" top="62" field="TEML1AtaqueMagia3"/>
-			<checkBox left="245" top="62" field="TEML1AtaqueMagia4"/>
+			<checkBox left="221" top="62" field="TEML2AtaqueMagia1"/>
+			<checkBox left="233" top="62" field="TEML3AtaqueMagia1"/>
+			<checkBox left="245" top="62" field="TEML4AtaqueMagia1"/>
 			
 			<edit left="62" top="115" width="35" height="22" horzTextAlign="center" fontColor="black" fontSize="14" transparent="false" field="CDMagia"/>			
 			<edit left="143" top="120" width="35" height="22" horzTextAlign="center" fontColor="black" fontSize="14" transparent="false" field="CDMagiaATBChave"/>
 			<edit left="187" top="120" width="35" height="22" horzTextAlign="center" fontColor="black" fontSize="14" transparent="false" field="CDMagiaProf"/>
-			<checkBox left="225" top="121" field="TEML2CDMagia1"/>
-			<checkBox left="237" top="121" field="TEML2CDMagia2"/>
-			<checkBox left="249" top="121" field="TEML2CDMagia3"/>
-			<checkBox left="261" top="121" field="TEML2CDMagia4"/>
+			<checkBox left="225" top="121" field="TEML1CDMagia1"/>
+			<checkBox left="237" top="121" field="TEML2CDMagia1"/>
+			<checkBox left="249" top="121" field="TEML3CDMagia1"/>
+			<checkBox left="261" top="121" field="TEML4CDMagia1"/>
 			
 			<edit left="135" top="190" width="28" height="22" horzTextAlign="center" fontColor="black" fontSize="14" transparent="false" field="TradicoesMagicasArcanas"/>	
 			<edit left="165" top="190" width="28" height="22" horzTextAlign="center" fontColor="black" fontSize="14" transparent="false" field="TradicoesMagicasOcustistas"/>	
@@ -53,13 +53,13 @@
 			<edit left="775" top="98" width="44" height="26" horzTextAlign="center" fontColor="black" fontSize="14" transparent="false" field="EspacoMagiaBaixo9"/>
 			<edit left="825" top="98" width="44" height="26" horzTextAlign="center" fontColor="black" fontSize="14" transparent="false" field="EspacoMagiaBaixo10"/>
 			
-			<edit left="32" top="327" width="250" height="20" horzTextAlign="center" fontColor="black" fontSize="14" transparent="false" field="EspacoMagiaBaixo10"/>
-			<edit left="32" top="348" width="225" height="35" horzTextAlign="center" fontColor="black" fontSize="14" transparent="false" field="EspacoMagiaBaixo10"/>
-			<edit left="259" top="358" width="41" height="16" horzTextAlign="center" fontColor="black" fontSize="14" transparent="false" field="EspacoMagiaBaixo10"/>
-			<edit left="283" top="335" width="17" height="12" horzTextAlign="center" fontColor="black" fontSize="14" transparent="false" field="EspacoMagiaBaixo10"/>
-			<checkBox left="251" top="370" field="TEML2CDMagia1"/> 
-			<checkBox left="273" top="370" field="TEML2CDMagia2"/>
-			<checkBox left="249" top="121" field="TEML2CDMagia3"/>
+			<edit left="32" top="327" width="250" height="20" horzTextAlign="center" fontColor="black" fontSize="14" transparent="false" field="TruquesNome1"/>
+			<edit left="32" top="348" width="207" height="35" horzTextAlign="center" fontColor="black" fontSize="14" transparent="false" field="TruquesDescricao1"/>
+			<edit left="243" top="358" width="57" height="16" horzTextAlign="center" fontColor="black" fontSize="14" transparent="false" field="TruquesAcoes1"/>
+			<edit left="283" top="335" width="17" height="12" horzTextAlign="center" fontColor="black" fontSize="14" transparent="false" field="TruquesPreparados1"/>
+			<checkBox left="239" top="370" field="VSM1Truques1"/> 
+			<checkBox left="259" top="370" field="VSM2Truques1"/>
+			<checkBox left="278" top="370" field="VSM3Truques1"/>
 		
 		
 		</rectangle>
