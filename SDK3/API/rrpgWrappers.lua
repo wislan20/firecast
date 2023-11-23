@@ -5,6 +5,7 @@ local localStrongRefContextoObjects = {};
 local Locale = require("locale.lua");
 local Async = require("async.lua");
 local System = require("system.lua");
+local Utils = require('utils.lua');
 
 local SHARED_OBJECT_TYPE = "rrpgObject";
 
@@ -786,13 +787,14 @@ local function _setupCallbackTrapForUniqueRoll(idOfRoll, callbackFunction)
 end;
 
 local _NULL_FUNCTION = function() end;
+
 rrpgWrappers.NullChatWrapper = {enviarMensagem = _NULL_FUNCTION, 
 								rolarDados = _NULL_FUNCTION,
 								enviarAcao = _NULL_FUNCTION,
 								enviarRisada = _NULL_FUNCTION,
 								enviarMensagemNPC = _NULL_FUNCTION,
 								enviarNarracao = _NULL_FUNCTION};
-
+								
 local function initBaseChatWrappedObjectFromHandle(handle)
 	local wObj = initWrappedObjectFromHandle(handle); 
 	local wChat = wObj;
@@ -963,6 +965,28 @@ local function initBaseChatWrappedObjectFromHandle(handle)
 		end;			
 	end;
 			
+	function wChat:__asyncSendMsgDescEx(msgDesc, params) 
+		if not System.checkAPIVersion(87, 4) then
+			return Async.Promise.failed("No API Support");
+		end;
+		
+		local finalMsgDesc = Utils.cloneTable(params) or {};
+		
+		for k, v in pairs(msgDesc) do
+			finalMsgDesc[k] = v;
+		end;
+				
+		local queue = self:_getTimedJobQueue()
+		
+		return queue:addAsyncJob(
+			function()
+				return Async.Promise.wrap(_obj_invokeExNoEval(self.handle, "AsyncSendMsg", finalMsgDesc));
+			end);	
+	end;
+			
+	function wChat:asyncSendMsg(message, params) 						
+		return self:__asyncSendMsgDescEx({msgType="standard", content=message}, params);
+	end;
 				
 	wChat.props["room"] = {getter = "getRoom", tipo = "table"};	
 	return wObj;
